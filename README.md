@@ -27,6 +27,7 @@ A low noise LDO supplies power from the USB-C power, with reverse current protec
 - Low noise regulator with reverse current protection
   - Allows the board to be powered by a 3.3V external supply
   - Regulator can be bypassed if desired via Header 2
+  - LDO can operate from as high as 20V
 - DCD and Packet Good signals routed to the header
 - USB VBUS routed to the header
 - USB VBUS, USB CC1/CC2 routed to an optional header for optional PD negotiation
