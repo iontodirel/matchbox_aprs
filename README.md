@@ -38,6 +38,7 @@ A low noise LDO supplies power from the USB-C power, with reverse current protec
 - Small 3.5mm audio jack with TXA/RXA and PPT compatible with both Mobilinkd and Digirig interfaces
   - Jack type can be set using solder pads or populating small resistors
 - Extensible interconnect can connect to the TNC and provide additional capabilities via daughter boards
+- All of the 5 LEDs on the Nino TNC are routed to display modem status
 
 ## Headers
 
