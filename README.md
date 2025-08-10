@@ -1,8 +1,12 @@
 # Matchbox APRS
 
-Miniaturized AFSK modem based on the Nino TNC design and firmware. NinoTNC firmware and circuit Copyright Nino Carrillo (https://ninotnc.com).
+Miniaturized FSK modem and APRS platform.
+
+The FSK modem is based on the Nino TNC design and firmware. NinoTNC firmware and circuit Copyright Nino Carrillo (https://ninotnc.com).
 
 The modem offers all the same capabilities as the Nino TNC, in a matchbox 50x35mm form factor.
+
+**TBD**: The APRS daughter board provides tracking and digipeating capability with BLE/BL access to the TNC and Wi-Fi connectivity. An optional uBlox receiver provides GPS.
 
 A 20 pin header routes the mode selections, two serial ports, one to connect to TNC, and one to USB. The DCD and "Packet Good" signals are also routed to the header.
 
@@ -10,7 +14,9 @@ The ICSP signals are routed to the header, where a Microchip PicKit 5 can be use
 
 A low noise LDO supplies power from the USB-C power, with reverse current protection. This allows the board to be powered by a 3.3V external supply whether the USB connector is plugged in or not.
 
-<img style="width:50%;" alt="top" src="https://github.com/user-attachments/assets/63fa2b39-bfae-494b-a51c-1bb6c17f4b32" />
+<img style="width:50%" alt="top" src="https://github.com/user-attachments/assets/63fa2b39-bfae-494b-a51c-1bb6c17f4b32" />
+
+<img style="width:50%" alt="bottom" src="https://github.com/user-attachments/assets/f0faf837-3248-4b96-ba4d-68ec74348e0a" />
 
 ## Features
 
@@ -31,6 +37,7 @@ A low noise LDO supplies power from the USB-C power, with reverse current protec
   - Resistors can be used to configure the digital modes on board if wanted
 - Small 3.5mm audio jack with TXA/RXA and PPT compatible with both Mobilinkd and Digirig interfaces
   - Jack type can be set using solder pads or populating small resistors
+- Extensible interconnect can connect to the TNC and provide additional capabilities via daughter boards
 
 ## Headers
 
