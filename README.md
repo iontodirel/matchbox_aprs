@@ -1,6 +1,6 @@
 # Matchbox APRS
 
-Miniaturized AFSK modem based on the Nino TNC design. NinoTNC firmware and circuit Copyright Nino Carrillo (https://ninotnc.com).
+Miniaturized AFSK modem based on the Nino TNC design and firmware. NinoTNC firmware and circuit Copyright Nino Carrillo (https://ninotnc.com).
 
 The modem offers all the same capabilities as the Nino TNC, in a matchbox 50x35mm form factor.
 
