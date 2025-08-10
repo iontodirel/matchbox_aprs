@@ -76,8 +76,10 @@ Pin 6 supplies 5V to the LDO. Higher voltage can also be supplied up to +20V
 
 ## LDO
 
-The on board LDO can run from as low as 4.3V for its maximum rate current at 500mA
+The on board LDO can run from as low as 4.3V for its maximum rated current of 500mA
 
 Higher voltages can also be supplied to the LDO for up to +20V
 
 The typical board consumption is about 50mA
+
+Because the LDO has reverse current protection, the board can be powered externally from 3.3V, while simultanously powered by the USB-C port
