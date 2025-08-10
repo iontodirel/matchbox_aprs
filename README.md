@@ -10,6 +10,8 @@ The ICSP signals are routed to the header, where a Microchip PicKit 5 can be use
 
 A low noise LDO supplies power from the USB-C power, with reverse current protection. This allows the board to be powered by a 3.3V external supply whether the USB connector is plugged in or not.
 
+<img style="width:50%;" alt="top" src="https://github.com/user-attachments/assets/63fa2b39-bfae-494b-a51c-1bb6c17f4b32" />
+
 ## Features
 
 - Small form factor: 50x35mm
