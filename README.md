@@ -20,9 +20,12 @@ A low noise LDO supplies power from the USB-C power, with reverse current protec
   - 63% smaller compared to the original Nino TNC mainboard
 - Low noise regulator with reverse current protection
   - Allows the board to be powered by a 3.3V external supply
+  - Regulator can be bypassed if desired via Header 2
 - DCD and Packet Good signals routed to the header
 - USB VBUS routed to the header
 - USB VBUS, USB CC1/CC2 routed to an optional header for optional PD negotiation
+  - Up to 4A can be drawn from the USB interface with PD
+  - Voltages highter than 5V can be negotiated and supplied to an off board regulator
 - Standalone operation
   - Serial interfaces can be connected together using solder pads or small resistors
   - Resistors can be used to configure the digital modes on board if wanted
