@@ -38,8 +38,8 @@ A low noise LDO supplies power from the USB-C power, with reverse current protec
 
 | Pin | Label     | Description                                                                  |
 |-----|-----------|------------------------------------------------------------------------------|
-| 1   | +5V       | +5V supply                                                                   |
-| 2   | +5V       | +5V supply (duplicate pin for higher current or alternate routing)           |
+| 1   | USB VBUS  | USB bus supply                                                               |
+| 2   | USB VBUS  | USB bus supply (duplicate pin for higher current or alternate routing)       |
 | 3   |           | Not connected / reserved                                                     |
 | 4   | GND       | Ground                                                                       |
 | 5   | GND       | Ground                                                                       |
@@ -63,6 +63,8 @@ A low noise LDO supplies power from the USB-C power, with reverse current protec
 
 Header 2 is optional if pins 4, 5 and 6 are tied together using the on board resistor footprint
 
+Pin 6 supplies 5V to the LDO. Higher voltage can also be supplied up to +20V
+
 | Pin | Label     | Description                                                                  |
 |-----|-----------|------------------------------------------------------------------------------|
 | 1   | GND       | Ground                                                                       |
@@ -70,4 +72,12 @@ Header 2 is optional if pins 4, 5 and 6 are tied together using the on board res
 | 3   | USB CC1   | USB PD configuration                                                         |
 | 4   | USB VBUS  | USB bus supply                                                               |
 | 5   | USB VBUS  | USB bus supply (duplicate pin for higher current, 2A max)                    |
-| 6   | +5V       | +5V supply, typically to be connected to USB VBUS                            |
+| 6   | +5V       | +5V supply, typically to be connected to USB VBUS; LDO supports up to 20V    |
+
+## LDO
+
+The on board LDO can run from as low as 4.3V for its maximum rate current at 500mA
+
+Higher voltages can also be supplied to the LDO for up to +20V
+
+The typical board consumption is about 50mA
