@@ -72,7 +72,7 @@ Pin 6 supplies 5V to the LDO. Higher voltage can also be supplied up to +20V
 | 3   | USB CC1   | USB PD configuration                                                         |
 | 4   | USB VBUS  | USB bus supply                                                               |
 | 5   | USB VBUS  | USB bus supply (duplicate pin for higher current, 2A max)                    |
-| 6   | +5V       | +5V supply, typically to be connected to USB VBUS; LDO supports up to 20V    |
+| 6   | +5V       | LDO +5V supply, typically to be connected to USB VBUS                        |
 
 ## LDO
 
