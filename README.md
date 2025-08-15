@@ -92,3 +92,18 @@ Higher voltages can also be supplied to the LDO for up to +20V
 The typical board consumption is about 50mA
 
 Because the LDO has reverse current protection, the board can be powered externally from 3.3V, while simultanously powered by the USB-C port
+
+## License
+
+NinoTNC firmware and circuit copyright Nino Carrillo (https://ninotnc.com).
+
+Gerber files copyright Ion Todirel. The gerber files can be used for any non commercial purpose. The gerber files can ge used by the Nino TNC project creators and contributors for any purpose as long as the following copyright is reproduced:
+
+```
+matchbox APRS
+Copyright (C) 2025 Ion Todirel
+```
+
+All the other assets in this repository are in the public domain.
+
+
