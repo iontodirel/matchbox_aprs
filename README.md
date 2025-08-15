@@ -106,4 +106,6 @@ Copyright (C) 2025 Ion Todirel
 
 All the other assets in this repository are in the public domain.
 
+`libaprs`, `libaprsroute` and `libaprstrack` copyright Ion Todirel under MIT license. 
+
 
