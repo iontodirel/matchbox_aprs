@@ -6,13 +6,13 @@ The FSK modem is based on the Nino TNC design and firmware. NinoTNC firmware and
 
 The modem offers all the same capabilities as the Nino TNC, in a matchbox 50x35mm form factor.
 
-**TBD**: The APRS daughter board provides tracking and digipeating capability with BLE/BL access to the TNC and Wi-Fi connectivity. An optional uBlox receiver provides GPS.
+The APRS daughter board provides tracking and digipeating capability with BLE/BL access to the TNC and Wi-Fi connectivity. An optional uBlox receiver provides GPS.
 
-A 20 pin header routes the mode selections, two serial ports, one to connect to TNC, and one to USB. The DCD and "Packet Good" signals are also routed to the header.
+A 20 pin header routes the mode selections, two serial ports, one to connect to the TNC, and one to USB. The DCD and "Packet Good" signals are also routed to the header.
 
-The ICSP signals are routed to the header, where a Microchip PicKit 5 can be used to flash the dsPIC 33 MCU.
+The ICSP signals are routed to the header, where a Microchip PicKit 5 can be used to flash the dsPIC33 MCU.
 
-A low noise LDO supplies power from the USB-C power, with reverse current protection. This allows the board to be powered by a 3.3V external supply whether the USB connector is plugged in or not.
+A low noise LDO regulator supplies power from the USB-C connector, while providing reverse current protection. This allows the board to be powered by a 3.3V external supply whether the USB connector is plugged in or not.
 
 <img style="width:50%" alt="top" src="https://github.com/user-attachments/assets/63fa2b39-bfae-494b-a51c-1bb6c17f4b32" />
 
@@ -21,24 +21,24 @@ A low noise LDO supplies power from the USB-C power, with reverse current protec
 ## Features
 
 - Small form factor: 50x35mm
-  - 0.8% larger compared to the Pico APRS v4 mainboard
-  - 37% smaller compared to the Mobilinkd TNC4 mainboard
-  - 63% smaller compared to the original Nino TNC mainboard
+  - 0.8% larger compared the Pico APRS v4 mainboard
+  - 37% smaller than the Mobilinkd TNC4 mainboard
+  - 63% smaller than the original Nino TNC mainboard
 - Low noise regulator with reverse current protection
   - Allows the board to be powered by a 3.3V external supply
   - Regulator can be bypassed if desired via Header 2
   - LDO can operate from as high as 20V
-- DCD and Packet Good signals routed to the header
+- DCD and Packet Good signals are routed to the header
 - USB VBUS routed to the header
 - USB VBUS, USB CC1/CC2 routed to an optional header for optional PD negotiation
   - Up to 4A can be drawn from the USB interface with PD
-  - Voltages highter than 5V can be negotiated and supplied to an off board regulator
+  - Voltages higher than 5V can be negotiated and supplied to an off board regulator
 - Standalone operation
   - Serial interfaces can be connected together using solder pads or small resistors
   - Resistors can be used to configure the digital modes on board if wanted
-- Small 3.5mm audio jack with TXA/RXA and PPT compatible with both Mobilinkd and Digirig interfaces
+- Small 3.5mm audio jack with TXA/RXA and PPT compatible with either Mobilinkd TNC4 or Digirig
   - Jack type can be set using solder pads or populating small resistors
-- Extensible interconnect can connect to the TNC and provide additional capabilities via daughter boards
+- Extensible interconnect system can connect to the TNC and provide additional capabilities via daughter boards
 - All of the 5 LEDs on the Nino TNC are routed to display modem status
 
 ## Headers
