@@ -97,15 +97,16 @@ Because the LDO has reverse current protection, the board can be powered externa
 
 NinoTNC firmware and circuit copyright Nino Carrillo (https://ninotnc.com).
 
-Gerber files copyright Ion Todirel. The gerber files can be used for any non commercial purpose. The gerber files can ge used by the Nino TNC project creators and contributors for any purpose as long as the following copyright is reproduced:
+Gerber files copyright Ion Todirel. The gerber files can be used for non commercial purposes. The gerber files can be used by the Nino TNC project creators and contributors for any purpose as long as the following notice is reproduced:
 
 ```
 matchbox APRS
 Copyright (C) 2025 Ion Todirel
 ```
 
+`libaprs`, `libaprsroute` and `libaprstrack` copyright Ion Todirel under MIT license. 
+
 All the other assets in this repository are in the public domain.
 
-`libaprs`, `libaprsroute` and `libaprstrack` copyright Ion Todirel under MIT license. 
 
 
