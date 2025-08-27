@@ -32,7 +32,7 @@ A low noise LDO regulator supplies power from the USB-C connector, while providi
   - DCD and Packet Good signals are routed to the header
   - USB VBUS routed to the header
   - USB VBUS, USB CC1/CC2 routed to an optional header for optional PD negotiation
-    - Up to 4A can be drawn from the USB interface with PD
+    - Up to 3.2A can be drawn from the USB interface with PD
     - Voltages higher than 5V can be negotiated and supplied to an off board regulator
   - Standalone operation
     - Serial interfaces can be connected together using solder pads or small resistors
@@ -42,6 +42,13 @@ A low noise LDO regulator supplies power from the USB-C connector, while providi
   - Extensible interconnect system can connect to the TNC and provide additional capabilities via daughter boards
   - All of the 5 LEDs on the Nino TNC are routed to display modem status
 - Daughter board - Standalone Digipeater and tracker
+  - Linear battery charger can charge a Lipo with up to 1.5A of current
+  - The built-in power path automatically switches between the battery power and USB power, while charging the battery when USB power is present
+  - A buck-boost convertor supplies +5V to the mainboard regardless of the battery voltage
+  - Low noise regulator supplies power to the daughter board independently of the main board
+  - Two load switches control the power to the GNSS receiver and mainboard and allow the daughther board to fully turn off both devices programatically
+  - An onboard GNSS receiver with built-in antenna provides GPS position data
+  - The ESP32 based MCU supports Wi-Fi, BL classic
 
 ## Connectors
 
