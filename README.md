@@ -1,18 +1,16 @@
 # Matchbox APRS
 
-Miniaturized FSK modem and APRS platform.
+Miniaturized FSK modem and APRS platform in a compact and extensible 50×35mm "matchbox" form factor.
 
-The FSK modem is based on the Nino TNC design and firmware. NinoTNC firmware and circuit Copyright Nino Carrillo (https://ninotnc.com).
+The modem is based on the Nino TNC design and firmware. NinoTNC firmware and circuit copyright (C) Nino Carrillo (https://ninotnc.com).
 
-The modem offers all the same capabilities as the Nino TNC, in a matchbox 50x35mm form factor.
+The APRS daughterboard adds standalone tracking and digipeating capabilities, with BLE/BT Classic access to the modem and Wi-Fi connectivity.
 
-The APRS daughter board provides tracking and digipeating capability with BLE/BL access to the TNC and Wi-Fi connectivity. An optional uBlox receiver provides GPS.
+A 24-pin FFC expansion connector exposes modem mode selection, two serial ports (one to the TNC, one to USB), and status signals such as DCD and Packet Good.
 
-A 24 FCC connector routes the mode selections, and two serial ports: one to connect to the TNC, and one to USB. The DCD and "Packet Good" signals are also routed to the header.
+Programming of the modem is supported through ICSP signals routed to the connector, allowing a Microchip PICkit 5 to directly flash the onboard dsPIC33 MCU.
 
-The ICSP signals are routed to the FCC connector, where a Microchip PicKit 5 can be used to flash the dsPIC33 MCU.
-
-A low noise LDO regulator supplies power from the USB-C connector, while providing reverse current protection. This allows the board to be powered by a 3.3V external supply whether the USB connector is plugged in or not.
+Power is provided through a USB-C port via a low-noise LDO regulator with reverse-current protection. This design allows seamless switchover between USB and external 3.3 V supplies.
 
 <img style="width:50%" alt="top" src="https://github.com/user-attachments/assets/63fa2b39-bfae-494b-a51c-1bb6c17f4b32" />
 
@@ -20,36 +18,43 @@ A low noise LDO regulator supplies power from the USB-C connector, while providi
 
 ## Features
 
-- Small form factor: 50x35mm
-  - 0.8% larger compared the Pico APRS v4 mainboard
+- Small form factor: 50x35mm board size
+  - 0.8% larger than the Pico APRS v4 mainboard
   - 37% smaller than the Mobilinkd TNC4 mainboard
   - 63% smaller than the original Nino TNC mainboard
-- Mainboard - TNC
-  - Low noise regulator with reverse current protection
-    - Allows the board to be powered by a 3.3V external supply
-    - Regulator can be bypassed if desired via Header 2
-    - LDO can operate from as high as 20V  
-  - DCD and Packet Good signals are routed to the header
-  - USB VBUS routed to the header
-  - USB VBUS, USB CC1/CC2 routed to an optional header for optional PD negotiation
-    - Up to 3.2A can be drawn from the USB interface with PD
-    - Voltages higher than 5V can be negotiated and supplied to an off board regulator
+- Mainboard - modem
+  - Power
+    - Low noise regulator with reverse current protection
+    - Supports 4–20 V input, up to 500 mA output
+    - Can be bypassed (FCC2) or powered externally at 3.3 V
+  - Interfaces
+    - USB VBUS and CC1/CC2 available for optional USB-PD negotiation
+      - Up to 3.2A from USB PD
+      - Voltages higher than 5V can be negotiated and supplied to an off board regulator
+    - Two UARTs (USB interface, TNC interface)
+    - DCD and Packet Good status signals available on header
   - Standalone operation
-    - Serial interfaces can be connected together using solder pads or small resistors
-    - Resistors can be used to configure the digital modes on board if wanted 
-  - Small 3.5mm audio jack with TXA/RXA and PPT compatible with either Mobilinkd TNC4 or Digirig
-    - Jack type can be set using solder pads or populating small resistors
-  - Extensible interconnect system can connect to the TNC and provide additional capabilities via daughter boards
-  - All of the 5 LEDs on the Nino TNC are routed to display modem status
+    - Internal solder pads or resistor options for loopback serial operation and mode selection
+    - Configurable digital modes via resistor population
+  - Audio I/O
+    - 3.5 mm TRRS jack (TXA/RXA/PTT), pinout selectable for Mobilinkd TNC4 or Digirig compatibility
+  - Status
+    - All of the 5 LEDs on the Nino TNC are routed to display modem status
+  - Extensible interconnect for optional daughterboards
 - Daughter board - Standalone Digipeater and tracker
-  - Linear battery charger can charge a Lipo with up to 1.5A of current
-  - The built-in power path automatically switches between the battery power and USB power, while charging the battery when USB power is present
-  - A buck-boost convertor supplies +5V to the mainboard regardless of the battery voltage
-  - Low noise regulator supplies power to the daughter board independently of the main board
-  - Two load switches control the power to the GNSS receiver and mainboard and allow the daughther board to fully turn off both devices programatically
-  - An onboard GNSS receiver with built-in antenna provides GPS position data
-  -   A small rechargeble battery keep the GNSS receiver warm speeding up the GPS lock
-  - The ESP32 based MCU supports Wi-Fi, BL classic and BLE and controls the mainboard and daugther board
+  - Power management
+    - Integrated 1.5 A Li-Po linear charger
+    - Power-path management automatically switches between battery and USB
+    - Buck-boost regulator provides stable 5V rail to the mainboard regardless of the battery voltage
+    - Independent low-noise LDO for daughterboard circuitry
+    - Two load switches allow MCU to power-gate the GNSS and mainboard and fully turn off both devices programatically
+  - GNSS
+    - Integrated GNSS receiver with onboard antenna
+    - Retains warm-start capability via small rechargeable backup cell
+  - Connectivity
+    - USB serial
+    - Wi-Fi
+    - BL and BLE
 
 ## Connectors
 
