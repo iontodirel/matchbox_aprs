@@ -8,9 +8,9 @@ The modem offers all the same capabilities as the Nino TNC, in a matchbox 50x35m
 
 The APRS daughter board provides tracking and digipeating capability with BLE/BL access to the TNC and Wi-Fi connectivity. An optional uBlox receiver provides GPS.
 
-A 20 pin header routes the mode selections, two serial ports, one to connect to the TNC, and one to USB. The DCD and "Packet Good" signals are also routed to the header.
+A 24 FCC connector routes the mode selections, and two serial ports: one to connect to the TNC, and one to USB. The DCD and "Packet Good" signals are also routed to the header.
 
-The ICSP signals are routed to the header, where a Microchip PicKit 5 can be used to flash the dsPIC33 MCU.
+The ICSP signals are routed to the FCC connector, where a Microchip PicKit 5 can be used to flash the dsPIC33 MCU.
 
 A low noise LDO regulator supplies power from the USB-C connector, while providing reverse current protection. This allows the board to be powered by a 3.3V external supply whether the USB connector is plugged in or not.
 
@@ -24,26 +24,28 @@ A low noise LDO regulator supplies power from the USB-C connector, while providi
   - 0.8% larger compared the Pico APRS v4 mainboard
   - 37% smaller than the Mobilinkd TNC4 mainboard
   - 63% smaller than the original Nino TNC mainboard
-- Low noise regulator with reverse current protection
-  - Allows the board to be powered by a 3.3V external supply
-  - Regulator can be bypassed if desired via Header 2
-  - LDO can operate from as high as 20V
-- DCD and Packet Good signals are routed to the header
-- USB VBUS routed to the header
-- USB VBUS, USB CC1/CC2 routed to an optional header for optional PD negotiation
-  - Up to 4A can be drawn from the USB interface with PD
-  - Voltages higher than 5V can be negotiated and supplied to an off board regulator
-- Standalone operation
-  - Serial interfaces can be connected together using solder pads or small resistors
-  - Resistors can be used to configure the digital modes on board if wanted
-- Small 3.5mm audio jack with TXA/RXA and PPT compatible with either Mobilinkd TNC4 or Digirig
-  - Jack type can be set using solder pads or populating small resistors
-- Extensible interconnect system can connect to the TNC and provide additional capabilities via daughter boards
-- All of the 5 LEDs on the Nino TNC are routed to display modem status
+- Mainboard - TNC
+  - Low noise regulator with reverse current protection
+    - Allows the board to be powered by a 3.3V external supply
+    - Regulator can be bypassed if desired via Header 2
+    - LDO can operate from as high as 20V  
+  - DCD and Packet Good signals are routed to the header
+  - USB VBUS routed to the header
+  - USB VBUS, USB CC1/CC2 routed to an optional header for optional PD negotiation
+    - Up to 4A can be drawn from the USB interface with PD
+    - Voltages higher than 5V can be negotiated and supplied to an off board regulator
+  - Standalone operation
+    - Serial interfaces can be connected together using solder pads or small resistors
+    - Resistors can be used to configure the digital modes on board if wanted 
+  - Small 3.5mm audio jack with TXA/RXA and PPT compatible with either Mobilinkd TNC4 or Digirig
+    - Jack type can be set using solder pads or populating small resistors
+  - Extensible interconnect system can connect to the TNC and provide additional capabilities via daughter boards
+  - All of the 5 LEDs on the Nino TNC are routed to display modem status
+- Daughter board - Standalone Digipeater and tracker
 
-## Headers
+## Connectors
 
-### Header 1
+### FCC1
 
 | Pin | Label     | Description                                                                  |
 |-----|-----------|------------------------------------------------------------------------------|
@@ -68,9 +70,9 @@ A low noise LDO regulator supplies power from the USB-C connector, while providi
 | 19  |           | Not connected / reserved                                                     |
 | 20  | +3.3V     | +3.3V supply from the LDO; can also be used to power the board               |
 
-### Header 2 (optional)
+### FCC2 (optional)
 
-Header 2 is optional if pins 4, 5 and 6 are tied together using the on board resistor footprint
+FCC2 connector is optional if pins 4, 5 and 6 are tied together using the on board resistor footprint
 
 Pin 6 supplies 5V to the LDO. Higher voltage can also be supplied up to +20V
 
@@ -85,7 +87,7 @@ Pin 6 supplies 5V to the LDO. Higher voltage can also be supplied up to +20V
 
 ## LDO
 
-The on board LDO can run from as low as 4.3V for its maximum rated current of 500mA
+The on board LDO can run from as low as 4V for its maximum rated current of 500mA
 
 Higher voltages can also be supplied to the LDO for up to +20V
 
