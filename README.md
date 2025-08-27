@@ -48,7 +48,8 @@ A low noise LDO regulator supplies power from the USB-C connector, while providi
   - Low noise regulator supplies power to the daughter board independently of the main board
   - Two load switches control the power to the GNSS receiver and mainboard and allow the daughther board to fully turn off both devices programatically
   - An onboard GNSS receiver with built-in antenna provides GPS position data
-  - The ESP32 based MCU supports Wi-Fi, BL classic
+  -   A small rechargeble battery keep the GNSS receiver warm speeding up the GPS lock
+  - The ESP32 based MCU supports Wi-Fi, BL classic and BLE and controls the mainboard and daugther board
 
 ## Connectors
 
