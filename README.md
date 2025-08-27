@@ -52,8 +52,8 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Integrated GNSS receiver with onboard antenna
     - Retains warm-start capability via small rechargeable backup cell
   - Tracker
-    - Supports all APRS packet types: position, Mic-E, compressed
-    - Supports the smart-beaconing algorithm
+    - APRS packet types: position, Mic-E, compressed
+    - Smart-beaconing algorithm
   - Digipeater
     - APRS routing: explicit, n-N
     - Supports all possible types of n-N addresses, ex: DIGIn-N
