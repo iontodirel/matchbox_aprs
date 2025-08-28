@@ -24,49 +24,64 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - 63% smaller than the original Nino TNC mainboard
 - Mainboard - modem
   - Power
-    - Low noise regulator with reverse current protection
-    - Supports 4–20 V input, up to 500 mA output
-    - Can be bypassed (FCC2) or powered externally at 3.3 V
+    - Low noise linear regulator with reverse current protection
+    - Supports 4–20V input, up to 500mA output
+    - USB power can be bypassed (FCC2), supplied externally (via FCC2 from 4-20V), or the board can be powered externally by a 3.3V supply
   - Interfaces
     - USB VBUS and CC1/CC2 available for optional USB-PD negotiation
       - Up to 3.2A from USB PD
-      - Voltages higher than 5V can be negotiated and supplied to an off board regulator
+      - Voltages higher than 5V can be negotiated and supplied to an off board regulator via FCC2
     - Two UARTs (USB interface, TNC interface)
-    - DCD and Packet Good status signals available on header
+      - Can be connected together by onboard resistors in standalone operation
+      - Can be router off the board via FCC2 
+    - `DCD` and `Packet Good` status signals available on FCC2
   - Standalone operation
-    - Internal solder pads or resistor options for loopback serial operation and mode selection
-    - Configurable digital modes via resistor population
+    - The mainboard can be configured to be used standalone without a daughter board 
+    - Internal solder pads or resistors connect the USB serial interface to the TNC serial port
+    - Placeholder resistors configure the TNC digital modes
   - Audio I/O
-    - 3.5 mm TRRS jack (TXA/RXA/PTT), pinout selectable for Mobilinkd TNC4 or Digirig compatibility
+    - 3.5 mm TRRS jack (TXA/RXA/PTT), selectable for Mobilinkd TNC4 or Digirig compatibility
   - Status
     - All of the 5 LEDs on the Nino TNC are routed to display modem status
-  - Extensible interconnect for optional daughterboards
+      - TX (red), DCD (yellow), RX (green), TX QUEUE (blue), CRC (red)
+      - 0201 LEDs are used to minimize board space
+  - Extensible interconnect for optional daughterboards (see FCC1 and FCC2 specification)
 - Daughter board - Standalone Digipeater and tracker
   - Power management
     - Integrated 1.5 A Li-Po linear charger
     - Power-path management automatically switches between battery and USB
     - Buck-boost regulator provides stable 5V rail to the mainboard regardless of the battery voltage
-    - Independent low-noise LDO for daughterboard circuitry
+    - Independent low-noise LDO for daughterboard power
     - Two load switches allow MCU to power-gate the GNSS and mainboard and fully turn off both devices programatically
+    - Push button controller starts the system via a tactile switch with MCU soft power off
   - GNSS
     - Integrated GNSS receiver with onboard antenna
     - Retains warm-start capability via small rechargeable backup cell
+    - GNSS receiver data can be used by the tracker, or passed through to the USB interface
   - Tracker
     - APRS packet types: position, Mic-E, compressed
-    - Smart-beaconing algorithm
+    - Mic-E status
+    - With or without timestamp (DHM/HMS formats)
+    - Position ambiguity
+    - Speed, course, altitude for both position packets and Mic-E packets
+    - UTF-8 support
+    - Smart-beaconing, Periodic or Manual beacon trigger
   - Digipeater
+    - Powerful fully featured and fully exrensible digipeater powered by [libaprsroute](https://github.com/iontodirel/libaprsroute)
     - APRS routing: explicit, n-N
-    - Supports all possible types of n-N addresses, ex: DIGIn-N
+    - Supports all types of valid n-N addresses, ex: DIGIn-N
     - Preemtive digipeating: front, truncate, drop and mark
     - Viscous digipeating
+    - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
   - Connectivity
     - USB serial
-    - Wi-Fi
-    - BL and BLE
+    - BT Classic and BLE
 
 ## Connectors
 
 ### FCC1
+
+The 24 pin connector used is FFC2B28-24-G, it can be used with a flat flex cable 05-24-A-0030-A-4-06-4-T.
 
 | Pin | Label     | Description                                                                  |
 |-----|-----------|------------------------------------------------------------------------------|
@@ -97,7 +112,9 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
 
 ### FCC2 (optional)
 
-FCC2 connector is optional if pins 3, 4, 5, 6, 11 and 12 are tied together using the on board resistor footprint
+The 12 pin connector used is FFC2B28-12-G, it can be used with a flat flex cable 05-12-A-0050-A-4-06-4-T.
+
+FCC2 connector is optional if pins 3, 4, 5, 6, 11 and 12 are tied together using the on board resistor footprint R7 marked "PWR"
 
 Pins 11 and 12 supplies 5V to the LDO. Higher voltage can also be supplied up to +20V
 
@@ -116,9 +133,9 @@ Pins 11 and 12 supplies 5V to the LDO. Higher voltage can also be supplied up to
 | 11  | +5V       | LDO +5V supply, typically to be connected to USB VBUS                        |
 | 12  | +5V       | LDO +5V supply, typically to be connected to USB VBUS                        |
 
-## LDO
+## Mainboard LDO
 
-The on board LDO can run from as low as 4V for its maximum rated current of 500mA
+The on board LDO on the can run from as low as 4V for its maximum rated current of 500mA
 
 Higher voltages can also be supplied to the LDO for up to +20V
 
@@ -128,7 +145,7 @@ Because the LDO has reverse current protection, the board can be powered externa
 
 ## License
 
-NinoTNC firmware and circuit copyright Nino Carrillo (https://ninotnc.com).
+Nino TNC firmware and circuit copyright Nino Carrillo (https://ninotnc.com).
 
 Gerber files copyright Ion Todirel. The gerber files can be used for non commercial purposes. The gerber files can be used by the Nino TNC project creators and contributors for any purpose as long as the following notice is reproduced:
 
