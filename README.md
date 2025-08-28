@@ -158,7 +158,7 @@ matchbox APRS
 Copyright (C) 2025 Ion Todirel
 ```
 
-`libaprs`, `libaprsroute` and `libaprstrack` copyright Ion Todirel under MIT license. 
+[`libaprs`](https://github.com/iontodirel/libaprs), [`libaprsroute`](https://github.com/iontodirel/libaprsroute) and [`libaprstrack`](https://github.com/iontodirel/libaprstrack) copyright Ion Todirel under MIT license. 
 
 All the other assets in this repository are in the public domain.
 
