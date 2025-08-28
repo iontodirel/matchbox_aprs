@@ -73,6 +73,10 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Preemtive digipeating: front, truncate, drop and mark
     - Viscous digipeating
     - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
+  - KISS TNC over the USB or Bluetooth
+    - GNSS data can also be routed throught the same interface
+    - APRS packets can optionally be sent and received in plain text instead of AX.25
+    - Simple text based command interface can be used to configure the modem, tracker, digipeater, and GNSS receiver 
   - Connectivity
     - USB serial
     - BT Classic and BLE
