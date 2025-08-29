@@ -78,6 +78,9 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - GNSS data can also be routed throught the same interface
     - APRS packets can optionally be sent and received in plain text instead of AX.25
     - Simple text based command interface can be used to configure the modem, tracker, digipeater, and GNSS receiver 
+  - RXA/TXA Calibration
+    - TX calibration using Bessel null. The daughter board can instruct the modem to send a sweeping test signal in the TX chain.
+    - RX calibration allows detecting RX chain signal clipping and help set the right sound volume on the radio.
   - Connectivity
     - USB serial
     - BT Classic and BLE
