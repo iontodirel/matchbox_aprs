@@ -99,6 +99,12 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - RXA/TXA Calibration
     - TX calibration using Bessel null. The daughter board can instruct the modem to send a sweeping test signal in the TX chain.
     - RX calibration allows detecting RX chain signal clipping and help set the right sound volume on the radio.
+  - Wi-Fi
+    - Operates in client mode
+    - Credentials are supplied via USB or BT
+    - 1 x TCP client supports the igate
+    - 1 x TCP server supports the KISS TNC over Wi-Fi
+    - 1 x HTTP server supports the configuration pages
   - Connectivity
     - USB serial
     - Both BT Classic and BLE are supported
