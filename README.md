@@ -45,6 +45,8 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - All of the 5 LEDs on the Nino TNC are routed to display modem status
       - TX (red), DCD (yellow), RX (green), TX QUEUE (blue), CRC (red)
       - 0201 LEDs are used to minimize board space
+  - Additional configuration options: AC/DC coupling, mic/data mode, 1x/11x TX range
+  - Adjustable TX delay and TX deviation via adjustable resistors
   - Extensible interconnect for optional daughterboards (see FCC1 and FCC2 specification)
 - Daughter board - Standalone Digipeater and tracker
   - Power management
