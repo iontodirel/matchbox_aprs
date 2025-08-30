@@ -83,20 +83,26 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
       - DCD is used to determine if the channel is busy and optionally can be used to dynamically adjust the delay to prevent the digipeater from TX over existing transmissions
     - Fill-in / direct only option
     - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
+  - RX igate
+    - RX packets can be gated to APRS-IS
+    - Enabling the igate does not disable the digipeater
   - Timekeeping
     - Time is supplied by the onboard GNSS receiver.
     - When a GPS lock is not available, time is supplied by a real-time clock. The GNSS receiver maintains the accuracy of the RTC.
-  - KISS TNC over the USB or Bluetooth
-    - GNSS data can also be routed throught the same interface
+  - KISS TNC
+    - Accessible over the USB, Bluetooth or Wi-Fi
+    - GNSS data can also be routed throught the same interfaces
     - APRS packets can optionally be sent and received in plain text instead of AX.25
     - Simple text based command interface can be used to configure the modem, tracker, digipeater, and GNSS receiver
     - Digital modes can be configured programatically (M0-M3)
+    - The capabilities of the interface are the same whether it is USB, Wi-Fi or BT
   - RXA/TXA Calibration
     - TX calibration using Bessel null. The daughter board can instruct the modem to send a sweeping test signal in the TX chain.
     - RX calibration allows detecting RX chain signal clipping and help set the right sound volume on the radio.
   - Connectivity
     - USB serial
-    - BT Classic and BLE
+    - Both BT Classic and BLE are supported
+    - Wi-Fi
 
 ## Connectors
 
