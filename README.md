@@ -77,8 +77,10 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - APRS routing: explicit, n-N
     - Supports all types of valid n-N addresses, ex: DIGIn-N
     - Preemtive digipeating: front, truncate, drop and mark
+    - Deduplication, trap excessive hops, optional address substitution
+    - Extensive routing disgnostics can be used to reconstruct the packet post digipeating or make intelligent decisions
     - Viscous digipeating
-      - DCD is used to determine if the channel is busy and optionally can be used to fynamically adjust the delay to prevent the digipeater from TX over existing transmissions
+      - DCD is used to determine if the channel is busy and optionally can be used to dynamically adjust the delay to prevent the digipeater from TX over existing transmissions
     - Fill-in / direct only option
     - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
   - Timekeeping
