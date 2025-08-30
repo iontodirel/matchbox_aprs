@@ -26,7 +26,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Power
     - Low noise linear regulator with reverse current protection
     - Supports 4–20V input, up to 500mA output
-    - USB power can be bypassed (FCC2), supplied externally (via FCC2 from 4-20V), or the board can be powered externally by a 3.3V supply
+    - Flexible power options: USB power can be bypassed (FCC2), supplied externally (via FCC2 from 4-20V), or the board can be powered externally by a 3.3V supply
   - Interfaces
     - USB VBUS and CC1/CC2 available for optional USB-PD negotiation
       - Up to 3.2A from USB PD
