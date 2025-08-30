@@ -46,7 +46,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
       - TX (red), DCD (yellow), RX (green), TX QUEUE (blue), CRC (red)
       - 0201 LEDs are used to minimize board space
   - Additional configuration options: AC/DC coupling, mic/data mode, 1x/11x TX range
-  - Adjustable TX delay and TX deviation via adjustable resistors
+  - Adjustable TX delay and TX deviation via adjustable miniature resistors
   - Extensible interconnect for optional daughterboards (see FFC1 and FFC2 specification)
 - Daughter board - Standalone Digipeater and tracker
   - Power management
@@ -56,6 +56,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Independent low-noise LDO for daughterboard power
     - Two load switches allow MCU to power-gate the GNSS and mainboard and fully turn off both devices programatically
     - Push button controller starts the system via a tactile switch with MCU soft power off
+    - Fuel gauge with voltage and current measurement for accurate state of charge estimation
   - GNSS
     - Integrated GNSS receiver with onboard antenna
     - Retains warm-start capability via small rechargeable backup cell
