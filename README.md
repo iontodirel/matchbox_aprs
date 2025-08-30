@@ -26,15 +26,15 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Power
     - Low noise linear regulator with reverse current protection
     - Supports 4–20V input, up to 500mA output
-    - Flexible power options: USB power can be bypassed (FCC2), supplied externally (via FCC2 from 4-20V), or the board can be powered externally by a 3.3V supply
+    - Flexible power options: USB power can be bypassed (FFC2), supplied externally (via FFC2 from 4-20V), or the board can be powered externally by a 3.3V supply (FFC1)
   - Interfaces
     - USB VBUS and CC1/CC2 available for optional USB-PD negotiation
       - Up to 3.2A from USB PD
       - Voltages higher than 5V can be negotiated and supplied to an off board regulator via FCC2
     - Two UARTs (USB interface, TNC interface)
       - Can be connected together by onboard resistors in standalone operation
-      - Can be router off the board via FCC2 
-    - `DCD` and `Packet Good` status signals available on FCC2
+      - Can be router off the board via FCC1 
+    - `DCD` and `Packet Good` status signals available on FFC1
   - Standalone operation
     - The mainboard can be configured to be used standalone without a daughter board 
     - Internal solder pads or resistors connect the USB serial interface to the TNC serial port
@@ -47,7 +47,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
       - 0201 LEDs are used to minimize board space
   - Additional configuration options: AC/DC coupling, mic/data mode, 1x/11x TX range
   - Adjustable TX delay and TX deviation via adjustable resistors
-  - Extensible interconnect for optional daughterboards (see FCC1 and FCC2 specification)
+  - Extensible interconnect for optional daughterboards (see FFC1 and FFC2 specification)
 - Daughter board - Standalone Digipeater and tracker
   - Power management
     - Integrated 1.5 A Li-Po linear charger
@@ -70,7 +70,9 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Smart-beaconing, Periodic or Manual beacon trigger
     - Flexible APRS encoding and tracker library powered by [libaprstrack](https://github.com/iontodirel/libaprstrack)
     - Position/speed/direction/altitude and time supplied by the onboard GNSS receiver
-    - Time is supplied by the onboard GNSS receiver. When a GPS lock is not available, time is supplied by a real-time clock. The GNSS receiver maintains the accuracy of the RTC.
+  - Timekeeping
+    - Time is supplied by the onboard GNSS receiver.
+    - When a GPS lock is not available, time is supplied by a real-time clock. The GNSS receiver maintains the accuracy of the RTC.
   - Digipeater
     - Powerful fully featured and fully extensible digipeater powered by [libaprsroute](https://github.com/iontodirel/libaprsroute)
     - APRS routing: explicit, n-N
