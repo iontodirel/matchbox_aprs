@@ -64,8 +64,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Tracker
     - APRS packet types: position, Mic-E, compressed
     - Mic-E status
-    - With or without timestamp (DHM/HMS formats)
-    - UTC or local
+    - With or without timestamp (DHM/HMS formats), UTC or local
     - Position ambiguity
     - Speed, course, altitude for both position packets and Mic-E packets
     - UTF-8 support
