@@ -70,9 +70,6 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Smart-beaconing, Periodic or Manual beacon trigger
     - Flexible APRS encoding and tracker library powered by [libaprstrack](https://github.com/iontodirel/libaprstrack)
     - Position/speed/direction/altitude and time supplied by the onboard GNSS receiver
-  - Timekeeping
-    - Time is supplied by the onboard GNSS receiver.
-    - When a GPS lock is not available, time is supplied by a real-time clock. The GNSS receiver maintains the accuracy of the RTC.
   - Digipeater
     - Powerful fully featured and fully extensible digipeater powered by [libaprsroute](https://github.com/iontodirel/libaprsroute)
     - APRS routing: explicit, n-N
@@ -80,6 +77,9 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Preemtive digipeating: front, truncate, drop and mark
     - Viscous digipeating
     - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
+  - Timekeeping
+    - Time is supplied by the onboard GNSS receiver.
+    - When a GPS lock is not available, time is supplied by a real-time clock. The GNSS receiver maintains the accuracy of the RTC.
   - KISS TNC over the USB or Bluetooth
     - GNSS data can also be routed throught the same interface
     - APRS packets can optionally be sent and received in plain text instead of AX.25
