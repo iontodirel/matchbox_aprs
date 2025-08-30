@@ -77,6 +77,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Supports all types of valid n-N addresses, ex: DIGIn-N
     - Preemtive digipeating: front, truncate, drop and mark
     - Viscous digipeating
+    - Fill-in / direct only option
     - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
   - Timekeeping
     - Time is supplied by the onboard GNSS receiver.
@@ -84,7 +85,8 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - KISS TNC over the USB or Bluetooth
     - GNSS data can also be routed throught the same interface
     - APRS packets can optionally be sent and received in plain text instead of AX.25
-    - Simple text based command interface can be used to configure the modem, tracker, digipeater, and GNSS receiver 
+    - Simple text based command interface can be used to configure the modem, tracker, digipeater, and GNSS receiver
+    - Digital modes can be configured programatically (M0-M3)
   - RXA/TXA Calibration
     - TX calibration using Bessel null. The daughter board can instruct the modem to send a sweeping test signal in the TX chain.
     - RX calibration allows detecting RX chain signal clipping and help set the right sound volume on the radio.
