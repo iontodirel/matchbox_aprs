@@ -30,10 +30,10 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Interfaces
     - USB VBUS and CC1/CC2 available for optional USB-PD negotiation
       - Up to 3.2A from USB PD
-      - Voltages higher than 5V can be negotiated and supplied to an off board regulator via FCC2
+      - Voltages higher than 5V can be negotiated and supplied to an off board regulator via FFC2
     - Two UARTs (USB interface, TNC interface)
       - Can be connected together by onboard resistors in standalone operation
-      - Can be router off the board via FCC1 
+      - Can be router off the board via FFC1
     - `DCD` and `Packet Good` status signals available on FFC1
   - Standalone operation
     - The mainboard can be configured to be used standalone without a daughter board 
