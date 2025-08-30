@@ -54,9 +54,9 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Power-path management automatically switches between battery and USB
     - Buck-boost regulator provides stable 5V rail to the mainboard regardless of the battery voltage
     - Independent low-noise LDO for daughterboard power
-    - Two load switches allow MCU to power-gate the GNSS and mainboard and fully turn off both devices programatically
+    - Two load switches allow the MCU to power-gate the GNSS and mainboard and fully turn off both devices programatically
     - Push button controller starts the system via a tactile switch with MCU soft power off
-      - Auto start and always on are also supported
+      - Auto start and `always on` are also supported
     - Fuel gauge with voltage and current measurement for accurate state of charge estimation
   - GNSS
     - Integrated GNSS receiver with onboard antenna
