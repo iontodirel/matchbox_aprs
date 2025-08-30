@@ -93,7 +93,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
 
 ## Connectors
 
-### FCC1
+### FFC1
 
 The 24 pin connector used is FFC2B28-24-G, it can be used with a flat flex cable 05-24-A-0030-A-4-06-4-T.
 
@@ -124,7 +124,7 @@ The 24 pin connector used is FFC2B28-24-G, it can be used with a flat flex cable
 | 23  |           | Not connected / reserved                                                     |
 | 24  |           | Not connected / reserved                                                     |
 
-### FCC2 (optional)
+### FFC2 (optional)
 
 The 12 pin connector used is FFC2B28-12-G, it can be used with a flat flex cable 05-12-A-0050-A-4-06-4-T.
 
