@@ -71,12 +71,14 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Smart-beaconing, Periodic or Manual beacon trigger
     - Flexible APRS encoding and tracker library powered by [libaprstrack](https://github.com/iontodirel/libaprstrack)
     - Position/speed/direction/altitude and time supplied by the onboard GNSS receiver
+    - DCD is used to determine if the channel is busy and optionally can be used to prevent the tracker from TX over existing transmissions
   - Digipeater
     - Powerful fully featured and fully extensible digipeater powered by [libaprsroute](https://github.com/iontodirel/libaprsroute)
     - APRS routing: explicit, n-N
     - Supports all types of valid n-N addresses, ex: DIGIn-N
     - Preemtive digipeating: front, truncate, drop and mark
     - Viscous digipeating
+      - DCD is used to determine if the channel is busy and optionally can be used to fynamically adjust the delay to prevent the digipeater from TX over existing transmissions
     - Fill-in / direct only option
     - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
   - Timekeeping
