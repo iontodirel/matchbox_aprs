@@ -70,7 +70,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Smart-beaconing, Periodic or Manual beacon trigger
     - Flexible APRS encoding and tracker library powered by [libaprstrack](https://github.com/iontodirel/libaprstrack)
     - Position/speed/direction/altitude and time supplied by the onboard GNSS receiver
-    - Time supplied by the onboard GNSS receiver and real-time clock
+    - Time is supplied by the onboard GNSS receiver. When a GPS lock is not available, time is supplied by a real-time clock. 
   - Digipeater
     - Powerful fully featured and fully extensible digipeater powered by [libaprsroute](https://github.com/iontodirel/libaprsroute)
     - APRS routing: explicit, n-N
