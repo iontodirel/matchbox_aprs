@@ -68,7 +68,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - With or without timestamp (DHM/HMS formats), UTC or local
     - Position ambiguity
     - Speed, course, altitude for both position packets and Mic-E packets
-    - UTF-8 support
+    - Custom messages with UTF-8 support
     - Smart-beaconing, Periodic or Manual beacon trigger
     - Flexible APRS encoding and tracker library powered by [libaprstrack](https://github.com/iontodirel/libaprstrack)
     - Position/speed/direction/altitude and time supplied by the onboard GNSS receiver
@@ -80,8 +80,8 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - Preemtive digipeating: front, truncate, drop and mark
     - Deduplication, trap or reject excessive hops, optional explicit address substitution, optional completed n-N address substitution
     - Extensive routing disgnostics can be used to reconstruct the packet post digipeating or make intelligent decisions
-    - Viscous digipeating
-      - DCD is used to determine if the channel is busy and optionally can be used to dynamically adjust the delay to prevent the digipeater from TX over existing transmissions
+    - Viscous digipeating (hold time)
+      - DCD is used to determine if the channel is busy and optionally can be used to dynamically adjust the viscous delay to prevent the digipeater from TX over existing transmissions
     - Fill-in / direct only option
     - Digipeater implementation is completely standalone with no coupling to the MCU or other systems
   - RX igate
@@ -100,6 +100,12 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - RXA/TXA Calibration
     - TX calibration using Bessel null. The daughter board can instruct the modem to send a sweeping test signal in the TX chain.
     - RX calibration allows detecting RX chain signal clipping and help set the right sound volume on the radio.
+  - Standalone
+    - The tracker, digipeater and igate operations are fully standalone; they run directly on the ESP32 MCU
+    - A computer or smartphone is not needed other than for the initial configuration
+    - The wired (USB) and wireless (BT, Wi-Fi) are only used for configuration
+    - The tracker and digipeater can operate off-grid with no wired or wireless connections
+    - Only the igate requires a Wi-Fi and internet connection to connect to APRS-IS
   - Wi-Fi
     - Operates in client mode
     - Credentials are supplied via USB or BT
