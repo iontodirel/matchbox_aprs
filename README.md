@@ -48,6 +48,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Additional configuration options: AC/DC coupling, mic/data mode, 1x/11x TX range
   - Adjustable TX delay and TX deviation via adjustable miniature resistors
   - Extensible interconnect for optional daughterboards (see FFC1 and FFC2 specification)
+  - Power consumption about 50mA at 5V or about 0.25W
 - Daughter board - Standalone Digipeater and tracker
   - Power management
     - Integrated 1.5 A Li-Po linear charger
@@ -102,9 +103,9 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - RX calibration allows detecting RX chain signal clipping and help set the right sound volume on the radio.
   - Standalone
     - The tracker, digipeater and igate operation are fully standalone; they run directly on the ESP32 MCU
-    - A computer or smartphone is not needed other than for the initial configuration (except for the igate) 
-    - The wired (USB) and wireless (BT, Wi-Fi) are only used for configuration (except for the igate)
-    - The tracker and digipeater can operate off-grid with no wired or wireless connections, with no computers, with no smartphones or any other devices
+    - A computer or smartphone is not needed other than for the initial configuration 
+    - The wired (USB) and wireless (BT, Wi-Fi) are only used for configuration (with the exception of the igate)
+    - The tracker and digipeater can operate fully off-grid with no wired or wireless connections, with no computers, with no smartphones or any other devices
     - Only the igate requires a Wi-Fi and internet connection to connect to APRS-IS
   - Wi-Fi
     - Operates in client mode
