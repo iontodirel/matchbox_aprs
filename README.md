@@ -2,9 +2,11 @@
 
 Miniaturized FSK modem and APRS platform in a compact and extensible 50×35mm "matchbox" form factor.
 
-The modem is based on the Nino TNC design and firmware. NinoTNC firmware and circuit copyright (C) Nino Carrillo (https://ninotnc.com).
+Matchbox is made of two boards, with a Li-Po battery sandwitched in between. The boards are connected using two flex cable connectors. Both boards are 50x35mm. 
 
-The APRS daughterboard adds standalone tracking and digipeating capabilities, with BLE/BT Classic access to the modem and Wi-Fi connectivity.
+The `modem mainboard` is based on the Nino TNC design and firmware. NinoTNC firmware and circuit copyright (C) Nino Carrillo (https://ninotnc.com).
+
+The `APRS daughterboard` adds standalone tracking and digipeating capabilities, with BLE/BT Classic access to the modem and Wi-Fi connectivity. The daughterboard controls the entire platform. 
 
 A 24-pin FFC expansion connector exposes modem mode selection, two serial ports (one to the TNC, one to USB), and status signals such as DCD and Packet Good.
 
