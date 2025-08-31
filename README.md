@@ -101,10 +101,10 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
     - TX calibration using Bessel null. The daughter board can instruct the modem to send a sweeping test signal in the TX chain.
     - RX calibration allows detecting RX chain signal clipping and help set the right sound volume on the radio.
   - Standalone
-    - The tracker, digipeater and igate operations are fully standalone; they run directly on the ESP32 MCU
-    - A computer or smartphone is not needed other than for the initial configuration
-    - The wired (USB) and wireless (BT, Wi-Fi) are only used for configuration
-    - The tracker and digipeater can operate off-grid with no wired or wireless connections
+    - The tracker, digipeater and igate operation are fully standalone; they run directly on the ESP32 MCU
+    - A computer or smartphone is not needed other than for the initial configuration (except for the igate) 
+    - The wired (USB) and wireless (BT, Wi-Fi) are only used for configuration (except for the igate)
+    - The tracker and digipeater can operate off-grid with no wired or wireless connections, with no computers, with no smartphones or any other devices
     - Only the igate requires a Wi-Fi and internet connection to connect to APRS-IS
   - Wi-Fi
     - Operates in client mode
