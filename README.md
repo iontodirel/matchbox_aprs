@@ -48,7 +48,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Additional configuration options: AC/DC coupling, mic/data mode, 1x/11x TX range
   - Adjustable TX delay and TX deviation via adjustable miniature resistors
   - Extensible interconnect for optional daughterboards (see FFC1 and FFC2 specification)
-  - Power consumption about 50mA at 5V or about 0.25W
+  - Power consumption about 50mA at 3.3V or about 0.2W
 - Daughter board - Standalone Digipeater and tracker
   - Power management
     - Integrated 1.5 A Li-Po linear charger
