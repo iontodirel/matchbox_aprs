@@ -1,18 +1,32 @@
 # Matchbox APRS
 
-Miniaturized FSK modem and APRS platform in a compact and extensible 50×35mm "matchbox" form factor.
+Modular and portable APRS platform: a miniaturized FSK modem and APRS system in a compact and extensible 50×35mm form factor, the size of a box of matches.
 
-Matchbox is made of two boards, with a Li-Po battery sandwitched in between. The boards are connected using two flex cable connectors. Both boards are 50x35mm. 
+Matchbox is made of two boards, with a Li-Po battery sandwitched in between. The boards are connected using two flex cable connectors. 
+
+## Architecture
 
 The `modem mainboard` is based on the Nino TNC design and firmware. NinoTNC firmware and circuit copyright (C) Nino Carrillo (https://ninotnc.com).
 
-The `APRS daughterboard` adds standalone tracking and digipeating capabilities, with BLE/BT Classic access to the modem and Wi-Fi connectivity. The daughterboard controls the entire platform. 
+The `APRS system daughterboard` adds standalone tracking and digipeating capabilities, with BLE/BT Classic access to the modem and Wi-Fi connectivity. The daughterboard controls the entire platform. 
 
 A 24-pin FFC expansion connector exposes modem mode selection, two serial ports (one to the TNC, one to USB), and status signals such as DCD and Packet Good.
 
-Programming of the modem is supported through ICSP signals routed to the connector, allowing a Microchip PICkit 5 to directly flash the onboard dsPIC33 MCU.
-
 Power is provided through a USB-C port via a low-noise LDO regulator with reverse-current protection. This design allows seamless switchover between USB and external 3.3 V supplies.
+
+- Modular Two-Board Design
+  - Both boards measure **50 × 35 mm**
+  - Connected with **two FFC connectors** for high-density, low-profile interconnect
+  - **Li-Po battery** is sandwiched between the boards and allows handheld operation
+- Mainboard (Modem)
+  - Based on the [Nino TNC](https://ninotnc.com) design and firmware  
+  - Provides full FSK modem and KISS TNC functionality  
+  - Programmable via ICSP through the FFC connector (compatible with PICkit 5)
+  - Flexible supply options
+  - USB-C and 3.5mm TRRS audio jack
+- Daughterboard (APRS system)
+  - Powered by **ESP32 MCU** — controls the entire platform  
+  - Adds standalone **tracker, digipeater, and igate** functionality
 
 <img style="width:50%" alt="top" src="https://github.com/user-attachments/assets/63fa2b39-bfae-494b-a51c-1bb6c17f4b32" />
 
