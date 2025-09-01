@@ -190,9 +190,10 @@ Because the LDO has reverse current protection, the board can be powered externa
 
 I’ve always liked the idea of small, inexpensive digipeaters that you could throw in a car and set up anywhere during an emergency. Imagine a truck deploying hundreds of digipeaters. In a disaster or emergency, if they are so cheap that you don’t have to worry about recovery and they are modern to not create congestion, then it can really change the game about how we're thinking about emergency communications. Projects like Meshtastic have shown how far you can push modern features into very low-cost hardware, and that same principle can apply here. The goal is a device that’s affordable enough to be nearly disposable, but still very flexible, modern and useful in the real world. APRS is just too expensive if you have to budget for `robustness`, `size` and `power`. I would like APRS to succeed and to further be democratized and spread.
 
-Second, I wanted another home to integrate the C++ APRS code I’ve been building over the years — a tracker, digipeater, and other APRS libraries. Having a single platform that you can hold in your hands to host the C++ libraries that I wrote, makes it easier to see how everything fits in the bigger picture.
+Second, I wanted a place to integrate the C++ APRS code I’ve been building over the years — a tracker, digipeater logic, and other libraries. Having a single platform you can hold in your hands that brings all of these pieces together makes it easier to develop, test, and see how they fit into the bigger picture.
 
-Finally, I wanted a platform to be simple to maintain and contribute to, with a ton of hardware flexibility that allow the same hardware to be used in many different scenaries that I didn't envision.
+
+Finally, I wanted a platform that's simple to maintain and contribute to, with enough hardware flexibility that it can be used in scenarios I haven’t even thought of yet.
 
 ## License
 
