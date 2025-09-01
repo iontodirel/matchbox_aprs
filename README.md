@@ -4,6 +4,12 @@ Modular and portable APRS platform: a miniaturized FSK modem and APRS system in 
 
 Matchbox is made of two boards, with a Li-Po battery sandwitched in between. The boards are connected using two flex cable connectors. 
 
+## Motivation
+
+I’ve always liked the idea of small, inexpensive digipeaters that you could throw in a car and set up anywhere during an emergency. Imagine a truck deploying hundreds of them across an affected area. If they’re cheap enough that recovery isn’t a concern, and smart so that they don’t create congestion, it changes how we think about emergency communications. Projects like Meshtastic have shown how far modern features can be pushed into very low-cost hardware, and the same principle applies here. The goal is a device that’s affordable enough to be nearly disposable, but still flexible, modern, and genuinely useful in the real world. APRS today is often too expensive once you factor in `demodulator robustness`, `size`, and `power`. I’d like to see APRS succeed by becoming more democratized and widely adopted.
+
+Second, I wanted a place to integrate the C++ APRS code I’ve been building over the years — a tracker, digipeater logic, and other libraries. Having a single platform you can hold in your hands that brings all of these pieces together makes it easier to develop, test, and see how they fit into the bigger picture.
+
 ## Architecture
 
 The `modem mainboard` is based on the Nino TNC design and firmware. NinoTNC firmware and circuit copyright (C) Nino Carrillo (https://ninotnc.com).
@@ -199,12 +205,6 @@ Higher voltages can also be supplied to the LDO for up to +20V
 The typical board consumption is about 50mA
 
 Because the LDO has reverse current protection, the board can be powered externally from 3.3V, while simultanously powered by the USB-C port
-
-## Motivation
-
-I’ve always liked the idea of small, inexpensive digipeaters that you could throw in a car and set up anywhere during an emergency. Imagine a truck deploying hundreds of them across an affected area. If they’re cheap enough that recovery isn’t a concern, and smart so that they don’t create congestion, it changes how we think about emergency communications. Projects like Meshtastic have shown how far modern features can be pushed into very low-cost hardware, and the same principle applies here. The goal is a device that’s affordable enough to be nearly disposable, but still flexible, modern, and genuinely useful in the real world. APRS today is often too expensive once you factor in `demodulator robustness`, `size`, and `power`. I’d like to see APRS succeed by becoming more democratized and widely adopted.
-
-Second, I wanted a place to integrate the C++ APRS code I’ve been building over the years — a tracker, digipeater logic, and other libraries. Having a single platform you can hold in your hands that brings all of these pieces together makes it easier to develop, test, and see how they fit into the bigger picture.
 
 
 Finally, I wanted a platform that's simple to maintain and contribute to, with enough hardware flexibility that it can be used in scenarios I haven’t even thought of yet.
