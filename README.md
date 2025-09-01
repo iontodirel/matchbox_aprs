@@ -186,6 +186,10 @@ The typical board consumption is about 50mA
 
 Because the LDO has reverse current protection, the board can be powered externally from 3.3V, while simultanously powered by the USB-C port
 
+## Motivation
+
+WIP The philosophy behind this project is grounded in a few ideas. 
+
 ## License
 
 Nino TNC firmware and circuit copyright Nino Carrillo (https://ninotnc.com).
