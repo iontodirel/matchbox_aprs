@@ -74,13 +74,15 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
 - Daughter board - Standalone Digipeater and tracker
   - Power management
     - Integrated 1.5 A Li-Po linear charger
-    - Power-path management automatically switches between battery and USB
+    - Power-path management automatically switches between battery and USB power
     - Buck-boost regulator provides stable 5V rail to the mainboard regardless of the battery voltage
-    - Independent low-noise LDO for daughterboard power
+    - Independent power
+      - Low-noise LDO for daughterboard power
     - Two load switches allow the MCU to power-gate the GNSS and mainboard and fully turn off both devices programatically
     - Push button controller starts the system via a tactile switch with MCU soft power off
       - Auto start and `always on` are also supported
     - Fuel gauge with voltage and current measurement for accurate state of charge estimation
+    - Power bypass enables power from an external source like an solar MPPT regulator 
   - GNSS
     - Integrated GNSS receiver with onboard antenna
     - Retains warm-start capability via small rechargeable backup cell
@@ -113,6 +115,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Timekeeping
     - Time is supplied by the onboard GNSS receiver.
     - When a GPS lock is not available, time is supplied by a real-time clock. The GNSS receiver maintains the accuracy of the RTC.
+    - Onboard CR1025 lithium battery maintains the RTC time.
   - KISS TNC
     - Accessible over the USB, Bluetooth or Wi-Fi
     - GNSS data can also be routed throught the same interfaces
