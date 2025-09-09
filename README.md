@@ -2,13 +2,13 @@
 
 Modular and portable APRS platform: a miniaturized FSK modem and APRS system in a compact and extensible 50×35mm form factor, the size of a box of matches.
 
-Matchbox is made of two boards, with a Li-Po battery sandwitched in between. The boards are connected using two flex cable connectors. 
+Matchbox is made of two boards, with a Li-Po battery sandwitched in between. The boards are connected using two flex cable connectors. Each board can be used standalone. 
 
 ## Motivation
 
-I’ve always liked the idea of small, inexpensive digipeaters that you could throw in a car and set up anywhere during an emergency. Imagine a truck deploying hundreds of them across an affected area. If they’re cheap enough that recovery isn’t a concern, and smart so that they don’t create congestion, it changes how we think about emergency communications. Projects like Meshtastic have shown how far modern features can be pushed into very low-cost hardware, and the same principle applies here. The goal is a device that’s affordable enough to be nearly disposable, but still flexible, modern, and genuinely useful in the real world. APRS today is often too expensive once you factor in `demodulator robustness`, `size`, and `power`. I’d like to see APRS succeed by becoming more democratized and widely adopted.
+I’ve always liked the idea of small, inexpensive digipeaters that you could throw in a car and set up anywhere during an emergency. Imagine a truck deploying hundreds of them across an affected area. If they’re cheap enough that recovery isn’t a concern, and smart so that they don’t create congestion, it changes how we think about emergency communications. Projects like Meshtastic have shown how far modern features can be pushed into very low-cost hardware, and the same principle applies here. The goal is a device that’s affordable enough to be nearly disposable, but still flexible, modern, and genuinely useful in the real world. APRS today is often too expensive once you factor in `demodulator robustness`, `size`, and `power`. I’d like to see APRS succeed by becoming more democratized, accessible and widely adopted.
 
-Second, I wanted a place to integrate the C++ APRS code I’ve been building over the years — a tracker, digipeater logic, and other libraries. Having a single platform you can hold in your hands that brings all of these pieces together makes it easier to develop, test, and see how they fit into the bigger picture.
+Second, I wanted a place to integrate the C++ APRS code I’ve been building over the years — a tracker, digipeater, and other libraries. Having a single platform you can hold in your hands that brings all of these pieces together makes it easier to develop, test, and see how they fit into the bigger picture.
 
 ## Architecture
 
