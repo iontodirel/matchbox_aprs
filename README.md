@@ -34,9 +34,13 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
   - Powered by **ESP32 MCU** — controls the entire platform  
   - Adds standalone **tracker, digipeater, and igate** functionality
 
-<img style="width:50%" alt="top" src="https://github.com/user-attachments/assets/63fa2b39-bfae-494b-a51c-1bb6c17f4b32" />
+<img style="width:50%" alt="mainboard_top" src="https://github.com/user-attachments/assets/4fb3f365-637c-4361-bb9a-ac8ef6e81766" />
 
-<img style="width:50%" alt="bottom" src="https://github.com/user-attachments/assets/f0faf837-3248-4b96-ba4d-68ec74348e0a" />
+<img style="width:50%" alt="mainboard_bottom" src="https://github.com/user-attachments/assets/97e2708d-0c03-48e6-a1a9-d601f5d94c24" />
+
+<img style="width:50%" alt="sub_top" src="https://github.com/user-attachments/assets/b02db37f-47be-4b6d-a38b-a727cc7b49f1" />
+
+<img style="width:50%" alt="sub_bottom" src="https://github.com/user-attachments/assets/a9b974df-9614-45e9-80ef-ae213420053d" />
 
 ## Features
 
