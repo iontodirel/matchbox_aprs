@@ -33,6 +33,7 @@ Power is provided through a USB-C port via a low-noise LDO regulator with revers
 - Daughterboard (APRS system)
   - Powered by **ESP32 MCU** — controls the entire platform  
   - Adds standalone **tracker, digipeater, and igate** functionality
+  - Digipeater and tracker are implemented using the [libaprsroute](https://github.com/iontodirel/libaprsroute) and [libaprstrack](https://github.com/iontodirel/libaprstrack) libraries, which are fully testable
 
 <img style="width:50%" alt="mainboard_top" src="https://github.com/user-attachments/assets/4fb3f365-637c-4361-bb9a-ac8ef6e81766" />
 
